@@ -154,7 +154,7 @@ async function rebasePublicAssets(dir: string, basePath: string) {
 
 async function main() {
   // A project repo is served from /<repo>, a user/org site from the root.
-  const basePath = process.env.LM_BASE_PATH ?? '';
+  const basePath = process.env.LM_BASE_PATH ?? '/live.github.io';
 
   console.log('Preparing static export workspace…');
   await rm(WORK, { recursive: true, force: true });
